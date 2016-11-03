@@ -79,6 +79,11 @@ public class WhitespaceAfterCheck
             TokenTypes.COMMA,
             TokenTypes.SEMI,
             TokenTypes.TYPECAST,
+            TokenTypes.LITERAL_IF,
+            TokenTypes.LITERAL_ELSE,
+            TokenTypes.LITERAL_WHILE,
+            TokenTypes.LITERAL_DO,
+            TokenTypes.LITERAL_FOR,
         };
     }
 
