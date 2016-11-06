@@ -65,70 +65,70 @@ public class WhitespaceAfterCheckTest
 
     @Test
     public void testCast() throws Exception {
-        final DefaultConfiguration configurationForTestCast =
+        final DefaultConfiguration configurationTestCast =
                 createCheckConfig(WhitespaceAfterCheck.class);
-        configurationForTestCast.addAttribute("tokens", "TYPECAST");
+        configurationTestCast.addAttribute("tokens", "TYPECAST");
         final String[] expected = {
             "88:21: " + getCheckMessage(MSG_WS_TYPECAST),
         };
-        verify(configurationForTestCast, getPath("InputWhitespace.java"), expected);
+        verify(configurationTestCast, getPath("InputWhitespace.java"), expected);
     }
 
     @Test
     public void testSemi() throws Exception {
-        final DefaultConfiguration configurationForTestSemi =
+        final DefaultConfiguration configurationTestSemi =
                 createCheckConfig(WhitespaceAfterCheck.class);
-        configurationForTestSemi.addAttribute("tokens", "SEMI");
+        configurationTestSemi.addAttribute("tokens", "SEMI");
         final String[] expected = {
             "54:23: " + getCheckMessage(MSG_WS_NOT_FOLLOWED, ";"),
             "54:29: " + getCheckMessage(MSG_WS_NOT_FOLLOWED, ";"),
             "103:19: " + getCheckMessage(MSG_WS_NOT_FOLLOWED, ";"),
         };
-        verify(configurationForTestSemi, getPath("InputBraces.java"), expected);
+        verify(configurationTestSemi, getPath("InputBraces.java"), expected);
     }
 
     @Test
     public void testLiteralWhile() throws Exception {
-        final DefaultConfiguration configurationForTestLiteralWhile =
+        final DefaultConfiguration configurationTestLiteralWhile =
                 createCheckConfig(WhitespaceAfterCheck.class);
-        configurationForTestLiteralWhile.addAttribute("tokens", "LITERAL_WHILE");
+        configurationTestLiteralWhile.addAttribute("tokens", "LITERAL_WHILE");
         final String[] expected = {
-            "37:14: " + getCheckMessage(MSG_WS_NOT_FOLLOWED, "while"),
+            "39:14: " + getCheckMessage(MSG_WS_NOT_FOLLOWED, "while"),
         };
-        verify(configurationForTestLiteralWhile, getPath("InputBraces.java"), expected);
+        verify(configurationTestLiteralWhile, getPath("InputWhitespaceAfter.java"), expected);
     }
 
     @Test
     public void testLiteralIf() throws Exception {
-        final DefaultConfiguration configurationForTestLiteralIf =
+        final DefaultConfiguration configurationTestLiteralIf =
                 createCheckConfig(WhitespaceAfterCheck.class);
-        configurationForTestLiteralIf.addAttribute("tokens", "LITERAL_IF");
+        configurationTestLiteralIf.addAttribute("tokens", "LITERAL_IF");
         final String[] expected = {
             "18:11: " + getCheckMessage(MSG_WS_NOT_FOLLOWED, "if"),
         };
-        verify(configurationForTestLiteralIf, getPath("InputIfElse.java"), expected);
+        verify(configurationTestLiteralIf, getPath("InputWhitespaceAfter.java"), expected);
     }
 
     @Test
     public void testLiteralElse() throws Exception {
-        final DefaultConfiguration configurationForTestLiteralElse =
+        final DefaultConfiguration configurationTestLiteralElse =
                 createCheckConfig(WhitespaceAfterCheck.class);
-        configurationForTestLiteralElse.addAttribute("tokens", "LITERAL_ELSE");
+        configurationTestLiteralElse.addAttribute("tokens", "LITERAL_ELSE");
         final String[] expected = {
             "27:15: " + getCheckMessage(MSG_WS_NOT_FOLLOWED, "else"),
         };
-        verify(configurationForTestLiteralElse, getPath("InputIfElse.java"), expected);
+        verify(configurationTestLiteralElse, getPath("InputWhitespaceAfter.java"), expected);
     }
 
     @Test
     public void testLiteralFor() throws Exception {
-        final DefaultConfiguration configurationForTestLiteralFor =
+        final DefaultConfiguration configurationTestLiteralFor =
                 createCheckConfig(WhitespaceAfterCheck.class);
-        configurationForTestLiteralFor.addAttribute("tokens", "LITERAL_FOR");
+        configurationTestLiteralFor.addAttribute("tokens", "LITERAL_FOR");
         final String[] expected = {
-            "54:12: " + getCheckMessage(MSG_WS_NOT_FOLLOWED, "for"),
+            "51:12: " + getCheckMessage(MSG_WS_NOT_FOLLOWED, "for"),
         };
-        verify(configurationForTestLiteralFor, getPath("InputBraces.java"), expected);
+        verify(configurationTestLiteralFor, getPath("InputWhitespaceAfter.java"), expected);
     }
 
     @Test
