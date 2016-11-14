@@ -34,7 +34,13 @@ import com.puppycrawl.tools.checkstyle.utils.CommonUtils;
  * <p> By default the check will check the following tokens:
  *  {@link TokenTypes#COMMA COMMA},
  *  {@link TokenTypes#SEMI SEMI},
- *  {@link TokenTypes#TYPECAST TYPECAST}.
+ *  {@link TokenTypes#TYPECAST TYPECAST},
+ *  {@Link TokenTypes#LITERAL_IF LITERAL_IF},
+ *  {@Link TokenTypes#LITERAL_ELSE LITERAL_ELSE},
+ *  {@Link TokenTypes#LITERAL_WHILE LITERAL_WHILE},
+ *  {@Link TokensTypes#LITERAL_FOR LITERAL_FOR},
+ *  {@Link TokensTypes#LITERAL_DO LITERAL_DO},
+ *  {@Link TokenTypes#DO_WHILE DO_WHILE}.
  * </p>
  * <p>
  * An example of how to configure the check is:
@@ -84,6 +90,7 @@ public class WhitespaceAfterCheck
             TokenTypes.LITERAL_WHILE,
             TokenTypes.LITERAL_DO,
             TokenTypes.LITERAL_FOR,
+            TokenTypes.DO_WHILE,
         };
     }
 

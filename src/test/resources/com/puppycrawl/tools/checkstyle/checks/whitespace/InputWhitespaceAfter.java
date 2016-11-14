@@ -52,4 +52,16 @@ public class InputWhitespaceAfter {
             testFor();
         }
     }
+
+    void testDo() {
+        //Valid
+        do {
+            testDo();
+        } while (condition());
+
+        //Invalid
+        do{                             //violation
+            testDo();
+        } while (condition());
+    }
 }

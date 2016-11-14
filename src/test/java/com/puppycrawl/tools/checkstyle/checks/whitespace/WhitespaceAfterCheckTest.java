@@ -132,6 +132,28 @@ public class WhitespaceAfterCheckTest
     }
 
     @Test
+    public void testLiteralDo() throws Exception {
+        final DefaultConfiguration configurationTestLiteralDo =
+                createCheckConfig(WhitespaceAfterCheck.class);
+        configurationTestLiteralDo.addAttribute("tokens", "LITERAL_DO");
+        final String[] expected = {
+            "63:11: " + getCheckMessage(MSG_WS_NOT_FOLLOWED, "do"),
+        };
+        verify(configurationTestLiteralDo, getPath("InputWhitespaceAfter.java"), expected);
+    }
+
+    @Test
+    public void testDoWhile() throws Exception{
+        final DefaultConfiguration configurationTestDoWhile =
+                createCheckConfig(WhitespaceAfterCheck.class);
+        configurationTestDoWhile.addAttribute("tokens", "DO_WHILE");
+        final String[] expected = {
+            "18:16 " + getCheckMessage(MSG_WS_NOT_FOLLOWED, "do{}while"),
+        };
+        verify(configurationTestDoWhile, getPath("InputDoWhile.java"), expected);
+    }
+
+    @Test
     public void testEmptyForIterator() throws Exception {
         final String[] expected = {
             "14:31: " + getCheckMessage(MSG_WS_NOT_FOLLOWED, ";"),
