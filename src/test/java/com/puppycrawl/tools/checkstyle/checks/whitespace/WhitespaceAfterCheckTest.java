@@ -148,7 +148,7 @@ public class WhitespaceAfterCheckTest
                 createCheckConfig(WhitespaceAfterCheck.class);
         configurationTestDoWhile.addAttribute("tokens", "DO_WHILE");
         final String[] expected = {
-            "18:16 " + getCheckMessage(MSG_WS_NOT_FOLLOWED, "do{}while"),
+            "18:16 " + getCheckMessage(MSG_WS_NOT_FOLLOWED, "while"),
         };
         verify(configurationTestDoWhile, getPath("InputDoWhile.java"), expected);
     }
