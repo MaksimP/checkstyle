@@ -15,6 +15,6 @@ public class InputDoWhile {
         //Invalid
         do {
             testDoWhile();
-        } while(condition());            //!!!!violation
+        } while(condition());            //violation
     }
 }

@@ -38,8 +38,8 @@ import com.puppycrawl.tools.checkstyle.utils.CommonUtils;
  *  {@Link TokenTypes#LITERAL_IF LITERAL_IF},
  *  {@Link TokenTypes#LITERAL_ELSE LITERAL_ELSE},
  *  {@Link TokenTypes#LITERAL_WHILE LITERAL_WHILE},
- *  {@Link TokensTypes#LITERAL_FOR LITERAL_FOR},
- *  {@Link TokensTypes#LITERAL_DO LITERAL_DO},
+ *  {@Link TokenTypes#LITERAL_FOR LITERAL_FOR},
+ *  {@Link TokenTypes#LITERAL_DO LITERAL_DO},
  *  {@Link TokenTypes#DO_WHILE DO_WHILE}.
  * </p>
  * <p>
