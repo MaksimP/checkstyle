@@ -35,12 +35,12 @@ import com.puppycrawl.tools.checkstyle.utils.CommonUtils;
  *  {@link TokenTypes#COMMA COMMA},
  *  {@link TokenTypes#SEMI SEMI},
  *  {@link TokenTypes#TYPECAST TYPECAST},
- *  {@Link TokenTypes#LITERAL_IF LITERAL_IF},
- *  {@Link TokenTypes#LITERAL_ELSE LITERAL_ELSE},
- *  {@Link TokenTypes#LITERAL_WHILE LITERAL_WHILE},
- *  {@Link TokenTypes#LITERAL_FOR LITERAL_FOR},
- *  {@Link TokenTypes#LITERAL_DO LITERAL_DO},
- *  {@Link TokenTypes#DO_WHILE DO_WHILE}.
+ *  {@link TokenTypes#LITERAL_IF LITERAL_IF},
+ *  {@link TokenTypes#LITERAL_ELSE LITERAL_ELSE},
+ *  {@link TokenTypes#LITERAL_WHILE LITERAL_WHILE},
+ *  {@link TokenTypes#LITERAL_FOR LITERAL_FOR},
+ *  {@link TokenTypes#LITERAL_DO LITERAL_DO},
+ *  {@link TokenTypes#DO_WHILE DO_WHILE}.
  * </p>
  * <p>
  * An example of how to configure the check is:
